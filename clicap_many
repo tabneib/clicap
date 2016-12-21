@@ -1,0 +1,698 @@
+#!/bin/sh
+#######################################################################################
+
+#######################################################################################
+# @author Hoang-Duong Nguyen
+#######################################################################################
+
+#######################################################################################
+JAVA_HOME=/usr/lib/jvm/java-7-oracle
+OPTIONS='-Xms256m -Xmx256m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
+pidpath=/tmp/
+classname='clicap'
+pid=${classname}
+####################################################################################### 
+
+#######################################################################################
+start () {
+       # Run 51 Clicap - 1 central & 50 minor
+       cd jar	
+       echo -n 'Starting CliCap...'
+       echo $JAVA_HOME/bin/java
+       # Arguments: IS_CENTRAL - IS_READY - ID - COR_PORT - ENF_PORT -  REMOTE_PORT - DOMAIN - PREDECESSOR_ID - PREDECESSOR_DOMAIN - PREDECESSOR_PORT - SUCCESSOR_ID - SUCCESSOR_DOMAIN - SUCCESSOR_PORT - BIT_LENGTH - [remoteUnitID - domain - port]* 
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 1 1 2 10001 10002 10003 localhost 63 localhost 10153 3 localhost 10006 6     \
+                                                                 3 localhost 10006    \
+                                                                 5 localhost 10009    \
+                                                                 7 localhost 10012    \
+                                                                 10 localhost 10021    \
+                                                                 18 localhost 10045    \
+                                                                 34 localhost 10081    \
+                                                                  & echo $!>${pidpath}${pid}-2.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 3 10004 10005 10006 localhost 2 localhost 10003 5 localhost 10009 6     \
+                                                                 5 localhost 10009    \
+                                                                 5 localhost 10009    \
+                                                                 7 localhost 10012    \
+                                                                 11 localhost 10024    \
+                                                                 19 localhost 10048    \
+                                                                 35 localhost 10084    \
+                                                                  & echo $!>${pidpath}${pid}-3.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 5 10007 10008 10009 localhost 3 localhost 10006 7 localhost 10012 6     \
+                                                                 7 localhost 10012    \
+                                                                 7 localhost 10012    \
+                                                                 9 localhost 10018    \
+                                                                 13 localhost 10030    \
+                                                                 21 localhost 10054    \
+                                                                 37 localhost 10090    \
+                                                                  & echo $!>${pidpath}${pid}-5.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 7 10010 10011 10012 localhost 5 localhost 10009 8 localhost 10015 6     \
+                                                                 8 localhost 10015    \
+                                                                 9 localhost 10018    \
+                                                                 11 localhost 10024    \
+                                                                 15 localhost 10036    \
+                                                                 23 localhost 10060    \
+                                                                 42 localhost 10096    \
+                                                                  & echo $!>${pidpath}${pid}-7.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 8 10013 10014 10015 localhost 7 localhost 10012 9 localhost 10018 6     \
+                                                                 9 localhost 10018    \
+                                                                 10 localhost 10021    \
+                                                                 12 localhost 10027    \
+                                                                 16 localhost 10039    \
+                                                                 25 localhost 10063    \
+                                                                 42 localhost 10096    \
+                                                                  & echo $!>${pidpath}${pid}-8.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 9 10016 10017 10018 localhost 8 localhost 10015 10 localhost 10021 6     \
+                                                                 10 localhost 10021    \
+                                                                 11 localhost 10024    \
+                                                                 13 localhost 10030    \
+                                                                 17 localhost 10042    \
+                                                                 25 localhost 10063    \
+                                                                 42 localhost 10096    \
+                                                                  & echo $!>${pidpath}${pid}-9.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 10 10019 10020 10021 localhost 9 localhost 10018 11 localhost 10024 6     \
+                                                                 11 localhost 10024    \
+                                                                 12 localhost 10027    \
+                                                                 14 localhost 10033    \
+                                                                 18 localhost 10045    \
+                                                                 26 localhost 10066    \
+                                                                 42 localhost 10096    \
+                                                                  & echo $!>${pidpath}${pid}-10.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 11 10022 10023 10024 localhost 10 localhost 10021 12 localhost 10027 6     \
+                                                                 12 localhost 10027    \
+                                                                 13 localhost 10030    \
+                                                                 15 localhost 10036    \
+                                                                 19 localhost 10048    \
+                                                                 27 localhost 10069    \
+                                                                 43 localhost 10099    \
+                                                                  & echo $!>${pidpath}${pid}-11.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 12 10025 10026 10027 localhost 11 localhost 10024 13 localhost 10030 6     \
+                                                                 13 localhost 10030    \
+                                                                 14 localhost 10033    \
+                                                                 16 localhost 10039    \
+                                                                 20 localhost 10051    \
+                                                                 28 localhost 10072    \
+                                                                 44 localhost 10102    \
+                                                                  & echo $!>${pidpath}${pid}-12.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 13 10028 10029 10030 localhost 12 localhost 10027 14 localhost 10033 6     \
+                                                                 14 localhost 10033    \
+                                                                 15 localhost 10036    \
+                                                                 17 localhost 10042    \
+                                                                 21 localhost 10054    \
+                                                                 31 localhost 10075    \
+                                                                 45 localhost 10105    \
+                                                                  & echo $!>${pidpath}${pid}-13.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 14 10031 10032 10033 localhost 13 localhost 10030 15 localhost 10036 6     \
+                                                                 15 localhost 10036    \
+                                                                 16 localhost 10039    \
+                                                                 18 localhost 10045    \
+                                                                 22 localhost 10057    \
+                                                                 31 localhost 10075    \
+                                                                 46 localhost 10108    \
+                                                                  & echo $!>${pidpath}${pid}-14.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 15 10034 10035 10036 localhost 14 localhost 10033 16 localhost 10039 6     \
+                                                                 16 localhost 10039    \
+                                                                 17 localhost 10042    \
+                                                                 19 localhost 10048    \
+                                                                 23 localhost 10060    \
+                                                                 31 localhost 10075    \
+                                                                 47 localhost 10111    \
+                                                                  & echo $!>${pidpath}${pid}-15.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 16 10037 10038 10039 localhost 15 localhost 10036 17 localhost 10042 6     \
+                                                                 17 localhost 10042    \
+                                                                 18 localhost 10045    \
+                                                                 20 localhost 10051    \
+                                                                 25 localhost 10063    \
+                                                                 32 localhost 10078    \
+                                                                 48 localhost 10114    \
+                                                                  & echo $!>${pidpath}${pid}-16.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 17 10040 10041 10042 localhost 16 localhost 10039 18 localhost 10045 6     \
+                                                                 18 localhost 10045    \
+                                                                 19 localhost 10048    \
+                                                                 21 localhost 10054    \
+                                                                 25 localhost 10063    \
+                                                                 34 localhost 10081    \
+                                                                 49 localhost 10117    \
+                                                                  & echo $!>${pidpath}${pid}-17.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 18 10043 10044 10045 localhost 17 localhost 10042 19 localhost 10048 6     \
+                                                                 19 localhost 10048    \
+                                                                 20 localhost 10051    \
+                                                                 22 localhost 10057    \
+                                                                 26 localhost 10066    \
+                                                                 34 localhost 10081    \
+                                                                 50 localhost 10120    \
+                                                                  & echo $!>${pidpath}${pid}-18.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 19 10046 10047 10048 localhost 18 localhost 10045 20 localhost 10051 6     \
+                                                                 20 localhost 10051    \
+                                                                 21 localhost 10054    \
+                                                                 23 localhost 10060    \
+                                                                 27 localhost 10069    \
+                                                                 35 localhost 10084    \
+                                                                 51 localhost 10123    \
+                                                                  & echo $!>${pidpath}${pid}-19.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 20 10049 10050 10051 localhost 19 localhost 10048 21 localhost 10054 6     \
+                                                                 21 localhost 10054    \
+                                                                 22 localhost 10057    \
+                                                                 25 localhost 10063    \
+                                                                 28 localhost 10072    \
+                                                                 36 localhost 10087    \
+                                                                 53 localhost 10126    \
+                                                                  & echo $!>${pidpath}${pid}-20.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 21 10052 10053 10054 localhost 20 localhost 10051 22 localhost 10057 6     \
+                                                                 22 localhost 10057    \
+                                                                 23 localhost 10060    \
+                                                                 25 localhost 10063    \
+                                                                 31 localhost 10075    \
+                                                                 37 localhost 10090    \
+                                                                 53 localhost 10126    \
+                                                                  & echo $!>${pidpath}${pid}-21.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 22 10055 10056 10057 localhost 21 localhost 10054 23 localhost 10060 6     \
+                                                                 23 localhost 10060    \
+                                                                 25 localhost 10063    \
+                                                                 26 localhost 10066    \
+                                                                 31 localhost 10075    \
+                                                                 38 localhost 10093    \
+                                                                 54 localhost 10129    \
+                                                                  & echo $!>${pidpath}${pid}-22.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 23 10058 10059 10060 localhost 22 localhost 10057 25 localhost 10063 6     \
+                                                                 25 localhost 10063    \
+                                                                 25 localhost 10063    \
+                                                                 27 localhost 10069    \
+                                                                 31 localhost 10075    \
+                                                                 42 localhost 10096    \
+                                                                 56 localhost 10132    \
+                                                                  & echo $!>${pidpath}${pid}-23.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 25 10061 10062 10063 localhost 23 localhost 10060 26 localhost 10066 6     \
+                                                                 26 localhost 10066    \
+                                                                 27 localhost 10069    \
+                                                                 31 localhost 10075    \
+                                                                 34 localhost 10081    \
+                                                                 42 localhost 10096    \
+                                                                 57 localhost 10135    \
+                                                                  & echo $!>${pidpath}${pid}-25.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 26 10064 10065 10066 localhost 25 localhost 10063 27 localhost 10069 6     \
+                                                                 27 localhost 10069    \
+                                                                 28 localhost 10072    \
+                                                                 31 localhost 10075    \
+                                                                 34 localhost 10081    \
+                                                                 42 localhost 10096    \
+                                                                 58 localhost 10138    \
+                                                                  & echo $!>${pidpath}${pid}-26.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 27 10067 10068 10069 localhost 26 localhost 10066 28 localhost 10072 6     \
+                                                                 28 localhost 10072    \
+                                                                 31 localhost 10075    \
+                                                                 31 localhost 10075    \
+                                                                 35 localhost 10084    \
+                                                                 43 localhost 10099    \
+                                                                 59 localhost 10141    \
+                                                                  & echo $!>${pidpath}${pid}-27.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 28 10070 10071 10072 localhost 27 localhost 10069 31 localhost 10075 6     \
+                                                                 31 localhost 10075    \
+                                                                 31 localhost 10075    \
+                                                                 32 localhost 10078    \
+                                                                 36 localhost 10087    \
+                                                                 44 localhost 10102    \
+                                                                 60 localhost 10144    \
+                                                                  & echo $!>${pidpath}${pid}-28.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 31 10073 10074 10075 localhost 28 localhost 10072 32 localhost 10078 6     \
+                                                                 32 localhost 10078    \
+                                                                 34 localhost 10081    \
+                                                                 35 localhost 10084    \
+                                                                 42 localhost 10096    \
+                                                                 47 localhost 10111    \
+                                                                 63 localhost 10153    \
+                                                                  & echo $!>${pidpath}${pid}-31.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 32 10076 10077 10078 localhost 31 localhost 10075 34 localhost 10081 6     \
+                                                                 34 localhost 10081    \
+                                                                 34 localhost 10081    \
+                                                                 36 localhost 10087    \
+                                                                 42 localhost 10096    \
+                                                                 48 localhost 10114    \
+                                                                 2 localhost 10003    \
+                                                                  & echo $!>${pidpath}${pid}-32.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 34 10079 10080 10081 localhost 32 localhost 10078 35 localhost 10084 6     \
+                                                                 35 localhost 10084    \
+                                                                 36 localhost 10087    \
+                                                                 38 localhost 10093    \
+                                                                 42 localhost 10096    \
+                                                                 50 localhost 10120    \
+                                                                 2 localhost 10003    \
+                                                                  & echo $!>${pidpath}${pid}-34.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 35 10082 10083 10084 localhost 34 localhost 10081 36 localhost 10087 6     \
+                                                                 36 localhost 10087    \
+                                                                 37 localhost 10090    \
+                                                                 42 localhost 10096    \
+                                                                 43 localhost 10099    \
+                                                                 51 localhost 10123    \
+                                                                 3 localhost 10006    \
+                                                                  & echo $!>${pidpath}${pid}-35.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 36 10085 10086 10087 localhost 35 localhost 10084 37 localhost 10090 6     \
+                                                                 37 localhost 10090    \
+                                                                 38 localhost 10093    \
+                                                                 42 localhost 10096    \
+                                                                 44 localhost 10102    \
+                                                                 53 localhost 10126    \
+                                                                 5 localhost 10009    \
+                                                                  & echo $!>${pidpath}${pid}-36.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 37 10088 10089 10090 localhost 36 localhost 10087 38 localhost 10093 6     \
+                                                                 38 localhost 10093    \
+                                                                 42 localhost 10096    \
+                                                                 42 localhost 10096    \
+                                                                 45 localhost 10105    \
+                                                                 53 localhost 10126    \
+                                                                 5 localhost 10009    \
+                                                                  & echo $!>${pidpath}${pid}-37.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 38 10091 10092 10093 localhost 37 localhost 10090 42 localhost 10096 6     \
+                                                                 42 localhost 10096    \
+                                                                 42 localhost 10096    \
+                                                                 42 localhost 10096    \
+                                                                 46 localhost 10108    \
+                                                                 54 localhost 10129    \
+                                                                 7 localhost 10012    \
+                                                                  & echo $!>${pidpath}${pid}-38.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 42 10094 10095 10096 localhost 38 localhost 10093 43 localhost 10099 6     \
+                                                                 43 localhost 10099    \
+                                                                 44 localhost 10102    \
+                                                                 46 localhost 10108    \
+                                                                 50 localhost 10120    \
+                                                                 58 localhost 10138    \
+                                                                 10 localhost 10021    \
+                                                                  & echo $!>${pidpath}${pid}-42.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 43 10097 10098 10099 localhost 42 localhost 10096 44 localhost 10102 6     \
+                                                                 44 localhost 10102    \
+                                                                 45 localhost 10105    \
+                                                                 47 localhost 10111    \
+                                                                 51 localhost 10123    \
+                                                                 59 localhost 10141    \
+                                                                 11 localhost 10024    \
+                                                                  & echo $!>${pidpath}${pid}-43.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 44 10100 10101 10102 localhost 43 localhost 10099 45 localhost 10105 6     \
+                                                                 45 localhost 10105    \
+                                                                 46 localhost 10108    \
+                                                                 48 localhost 10114    \
+                                                                 53 localhost 10126    \
+                                                                 60 localhost 10144    \
+                                                                 12 localhost 10027    \
+                                                                  & echo $!>${pidpath}${pid}-44.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 45 10103 10104 10105 localhost 44 localhost 10102 46 localhost 10108 6     \
+                                                                 46 localhost 10108    \
+                                                                 47 localhost 10111    \
+                                                                 49 localhost 10117    \
+                                                                 53 localhost 10126    \
+                                                                 61 localhost 10147    \
+                                                                 13 localhost 10030    \
+                                                                  & echo $!>${pidpath}${pid}-45.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 46 10106 10107 10108 localhost 45 localhost 10105 47 localhost 10111 6     \
+                                                                 47 localhost 10111    \
+                                                                 48 localhost 10114    \
+                                                                 50 localhost 10120    \
+                                                                 54 localhost 10129    \
+                                                                 62 localhost 10150    \
+                                                                 14 localhost 10033    \
+                                                                  & echo $!>${pidpath}${pid}-46.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 47 10109 10110 10111 localhost 46 localhost 10108 48 localhost 10114 6     \
+                                                                 48 localhost 10114    \
+                                                                 49 localhost 10117    \
+                                                                 51 localhost 10123    \
+                                                                 56 localhost 10132    \
+                                                                 63 localhost 10153    \
+                                                                 15 localhost 10036    \
+                                                                  & echo $!>${pidpath}${pid}-47.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 48 10112 10113 10114 localhost 47 localhost 10111 49 localhost 10117 6     \
+                                                                 49 localhost 10117    \
+                                                                 50 localhost 10120    \
+                                                                 53 localhost 10126    \
+                                                                 56 localhost 10132    \
+                                                                 2 localhost 10003    \
+                                                                 16 localhost 10039    \
+                                                                  & echo $!>${pidpath}${pid}-48.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 49 10115 10116 10117 localhost 48 localhost 10114 50 localhost 10120 6     \
+                                                                 50 localhost 10120    \
+                                                                 51 localhost 10123    \
+                                                                 53 localhost 10126    \
+                                                                 57 localhost 10135    \
+                                                                 2 localhost 10003    \
+                                                                 17 localhost 10042    \
+                                                                  & echo $!>${pidpath}${pid}-49.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 50 10118 10119 10120 localhost 49 localhost 10117 51 localhost 10123 6     \
+                                                                 51 localhost 10123    \
+                                                                 53 localhost 10126    \
+                                                                 54 localhost 10129    \
+                                                                 58 localhost 10138    \
+                                                                 2 localhost 10003    \
+                                                                 18 localhost 10045    \
+                                                                  & echo $!>${pidpath}${pid}-50.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 51 10121 10122 10123 localhost 50 localhost 10120 53 localhost 10126 6     \
+                                                                 53 localhost 10126    \
+                                                                 53 localhost 10126    \
+                                                                 56 localhost 10132    \
+                                                                 59 localhost 10141    \
+                                                                 3 localhost 10006    \
+                                                                 19 localhost 10048    \
+                                                                  & echo $!>${pidpath}${pid}-51.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 53 10124 10125 10126 localhost 51 localhost 10123 54 localhost 10129 6     \
+                                                                 54 localhost 10129    \
+                                                                 56 localhost 10132    \
+                                                                 57 localhost 10135    \
+                                                                 61 localhost 10147    \
+                                                                 5 localhost 10009    \
+                                                                 21 localhost 10054    \
+                                                                  & echo $!>${pidpath}${pid}-53.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 54 10127 10128 10129 localhost 53 localhost 10126 56 localhost 10132 6     \
+                                                                 56 localhost 10132    \
+                                                                 56 localhost 10132    \
+                                                                 58 localhost 10138    \
+                                                                 62 localhost 10150    \
+                                                                 7 localhost 10012    \
+                                                                 22 localhost 10057    \
+                                                                  & echo $!>${pidpath}${pid}-54.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 56 10130 10131 10132 localhost 54 localhost 10129 57 localhost 10135 6     \
+                                                                 57 localhost 10135    \
+                                                                 58 localhost 10138    \
+                                                                 60 localhost 10144    \
+                                                                 2 localhost 10003    \
+                                                                 8 localhost 10015    \
+                                                                 25 localhost 10063    \
+                                                                  & echo $!>${pidpath}${pid}-56.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 57 10133 10134 10135 localhost 56 localhost 10132 58 localhost 10138 6     \
+                                                                 58 localhost 10138    \
+                                                                 59 localhost 10141    \
+                                                                 61 localhost 10147    \
+                                                                 2 localhost 10003    \
+                                                                 9 localhost 10018    \
+                                                                 25 localhost 10063    \
+                                                                  & echo $!>${pidpath}${pid}-57.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 58 10136 10137 10138 localhost 57 localhost 10135 59 localhost 10141 6     \
+                                                                 59 localhost 10141    \
+                                                                 60 localhost 10144    \
+                                                                 62 localhost 10150    \
+                                                                 2 localhost 10003    \
+                                                                 10 localhost 10021    \
+                                                                 26 localhost 10066    \
+                                                                  & echo $!>${pidpath}${pid}-58.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 59 10139 10140 10141 localhost 58 localhost 10138 60 localhost 10144 6     \
+                                                                 60 localhost 10144    \
+                                                                 61 localhost 10147    \
+                                                                 63 localhost 10153    \
+                                                                 3 localhost 10006    \
+                                                                 11 localhost 10024    \
+                                                                 27 localhost 10069    \
+                                                                  & echo $!>${pidpath}${pid}-59.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 60 10142 10143 10144 localhost 59 localhost 10141 61 localhost 10147 6     \
+                                                                 61 localhost 10147    \
+                                                                 62 localhost 10150    \
+                                                                 2 localhost 10003    \
+                                                                 5 localhost 10009    \
+                                                                 12 localhost 10027    \
+                                                                 28 localhost 10072    \
+                                                                  & echo $!>${pidpath}${pid}-60.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 61 10145 10146 10147 localhost 60 localhost 10144 62 localhost 10150 6     \
+                                                                 62 localhost 10150    \
+                                                                 63 localhost 10153    \
+                                                                 2 localhost 10003    \
+                                                                 5 localhost 10009    \
+                                                                 13 localhost 10030    \
+                                                                 31 localhost 10075    \
+                                                                  & echo $!>${pidpath}${pid}-61.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 62 10148 10149 10150 localhost 61 localhost 10147 63 localhost 10153 6     \
+                                                                 63 localhost 10153    \
+                                                                 2 localhost 10003    \
+                                                                 2 localhost 10003    \
+                                                                 7 localhost 10012    \
+                                                                 14 localhost 10033    \
+                                                                 31 localhost 10075    \
+                                                                  & echo $!>${pidpath}${pid}-62.pid
+
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 0 1 63 10151 10152 10153 localhost 62 localhost 10150 2 localhost 10003 6     \
+                                                                 2 localhost 10003    \
+                                                                 2 localhost 10003    \
+                                                                 3 localhost 10006    \
+                                                                 7 localhost 10012    \
+                                                                 15 localhost 10036    \
+                                                                 31 localhost 10075    \
+                                                                  & echo $!>${pidpath}${pid}-63.pid
+
+
+}
+stop () {
+       kill -15 `cat ${pidpath}${pid}-2.pid`
+       rm -r ${pidpath}${pid}-2.pid
+       kill -15 `cat ${pidpath}${pid}-3.pid`
+       rm -r ${pidpath}${pid}-3.pid
+       kill -15 `cat ${pidpath}${pid}-5.pid`
+       rm -r ${pidpath}${pid}-5.pid
+       kill -15 `cat ${pidpath}${pid}-7.pid`
+       rm -r ${pidpath}${pid}-7.pid
+       kill -15 `cat ${pidpath}${pid}-8.pid`
+       rm -r ${pidpath}${pid}-8.pid
+       kill -15 `cat ${pidpath}${pid}-9.pid`
+       rm -r ${pidpath}${pid}-9.pid
+       kill -15 `cat ${pidpath}${pid}-10.pid`
+       rm -r ${pidpath}${pid}-10.pid
+       kill -15 `cat ${pidpath}${pid}-11.pid`
+       rm -r ${pidpath}${pid}-11.pid
+       kill -15 `cat ${pidpath}${pid}-12.pid`
+       rm -r ${pidpath}${pid}-12.pid
+       kill -15 `cat ${pidpath}${pid}-13.pid`
+       rm -r ${pidpath}${pid}-13.pid
+       kill -15 `cat ${pidpath}${pid}-14.pid`
+       rm -r ${pidpath}${pid}-14.pid
+       kill -15 `cat ${pidpath}${pid}-15.pid`
+       rm -r ${pidpath}${pid}-15.pid
+       kill -15 `cat ${pidpath}${pid}-16.pid`
+       rm -r ${pidpath}${pid}-16.pid
+       kill -15 `cat ${pidpath}${pid}-17.pid`
+       rm -r ${pidpath}${pid}-17.pid
+       kill -15 `cat ${pidpath}${pid}-18.pid`
+       rm -r ${pidpath}${pid}-18.pid
+       kill -15 `cat ${pidpath}${pid}-19.pid`
+       rm -r ${pidpath}${pid}-19.pid
+       kill -15 `cat ${pidpath}${pid}-20.pid`
+       rm -r ${pidpath}${pid}-20.pid
+       kill -15 `cat ${pidpath}${pid}-21.pid`
+       rm -r ${pidpath}${pid}-21.pid
+       kill -15 `cat ${pidpath}${pid}-22.pid`
+       rm -r ${pidpath}${pid}-22.pid
+       kill -15 `cat ${pidpath}${pid}-23.pid`
+       rm -r ${pidpath}${pid}-23.pid
+       kill -15 `cat ${pidpath}${pid}-25.pid`
+       rm -r ${pidpath}${pid}-25.pid
+       kill -15 `cat ${pidpath}${pid}-26.pid`
+       rm -r ${pidpath}${pid}-26.pid
+       kill -15 `cat ${pidpath}${pid}-27.pid`
+       rm -r ${pidpath}${pid}-27.pid
+       kill -15 `cat ${pidpath}${pid}-28.pid`
+       rm -r ${pidpath}${pid}-28.pid
+       kill -15 `cat ${pidpath}${pid}-31.pid`
+       rm -r ${pidpath}${pid}-31.pid
+       kill -15 `cat ${pidpath}${pid}-32.pid`
+       rm -r ${pidpath}${pid}-32.pid
+       kill -15 `cat ${pidpath}${pid}-34.pid`
+       rm -r ${pidpath}${pid}-34.pid
+       kill -15 `cat ${pidpath}${pid}-35.pid`
+       rm -r ${pidpath}${pid}-35.pid
+       kill -15 `cat ${pidpath}${pid}-36.pid`
+       rm -r ${pidpath}${pid}-36.pid
+       kill -15 `cat ${pidpath}${pid}-37.pid`
+       rm -r ${pidpath}${pid}-37.pid
+       kill -15 `cat ${pidpath}${pid}-38.pid`
+       rm -r ${pidpath}${pid}-38.pid
+       kill -15 `cat ${pidpath}${pid}-42.pid`
+       rm -r ${pidpath}${pid}-42.pid
+       kill -15 `cat ${pidpath}${pid}-43.pid`
+       rm -r ${pidpath}${pid}-43.pid
+       kill -15 `cat ${pidpath}${pid}-44.pid`
+       rm -r ${pidpath}${pid}-44.pid
+       kill -15 `cat ${pidpath}${pid}-45.pid`
+       rm -r ${pidpath}${pid}-45.pid
+       kill -15 `cat ${pidpath}${pid}-46.pid`
+       rm -r ${pidpath}${pid}-46.pid
+       kill -15 `cat ${pidpath}${pid}-47.pid`
+       rm -r ${pidpath}${pid}-47.pid
+       kill -15 `cat ${pidpath}${pid}-48.pid`
+       rm -r ${pidpath}${pid}-48.pid
+       kill -15 `cat ${pidpath}${pid}-49.pid`
+       rm -r ${pidpath}${pid}-49.pid
+       kill -15 `cat ${pidpath}${pid}-50.pid`
+       rm -r ${pidpath}${pid}-50.pid
+       kill -15 `cat ${pidpath}${pid}-51.pid`
+       rm -r ${pidpath}${pid}-51.pid
+       kill -15 `cat ${pidpath}${pid}-53.pid`
+       rm -r ${pidpath}${pid}-53.pid
+       kill -15 `cat ${pidpath}${pid}-54.pid`
+       rm -r ${pidpath}${pid}-54.pid
+       kill -15 `cat ${pidpath}${pid}-56.pid`
+       rm -r ${pidpath}${pid}-56.pid
+       kill -15 `cat ${pidpath}${pid}-57.pid`
+       rm -r ${pidpath}${pid}-57.pid
+       kill -15 `cat ${pidpath}${pid}-58.pid`
+       rm -r ${pidpath}${pid}-58.pid
+       kill -15 `cat ${pidpath}${pid}-59.pid`
+       rm -r ${pidpath}${pid}-59.pid
+       kill -15 `cat ${pidpath}${pid}-60.pid`
+       rm -r ${pidpath}${pid}-60.pid
+       kill -15 `cat ${pidpath}${pid}-61.pid`
+       rm -r ${pidpath}${pid}-61.pid
+       kill -15 `cat ${pidpath}${pid}-62.pid`
+       rm -r ${pidpath}${pid}-62.pid
+       kill -15 `cat ${pidpath}${pid}-63.pid`
+       rm -r ${pidpath}${pid}-63.pid
+       echo -e "\nStopped CliCap\n"
+       exit 1
+}
+info () {
+       echo
+       echo 'BUILD:            .\clicap build'
+       echo 'RUN:              .\clicap start'
+       echo 'STOP:             .\clicap stop'
+       echo 'BUILD AND RUN:    .\clicap build start'
+       echo
+       return '0'
+}
+####################################################################################### 
+
+#######################################################################################
+if [ $# -gt 2 ] || [ $# -eq 0 ]; then
+       echo -e "\nWrong number of arguments!"
+       info
+       exit 1
+fi
+####################################################################################### 
+
+#######################################################################################
+if [ $# -eq 2 ]; then
+       if [ "$1" = "build" ] && [ "$2" = "start" ]; then
+               # Build CliCap		
+               ant		
+               # Start CliCap
+               	start
+       else
+               echo -e "\nIncorrect arguments!"
+               info
+               exit 1
+       fi
+fi
+####################################################################################### 
+
+#######################################################################################
+if [ $# -eq 1 ]; then
+       if [ "$1" = "start" ]; then	
+               # Run CliCap
+               start
+       else
+               if [ "$1" = "stop" ]; then
+                       # Stop CliCap
+                       stop
+               else
+                       if [  "$1" = "build" ]; then
+                               # Build CliCap				
+                               ant
+                       else
+                               echo -e "\nIncorrect argument!"
+                               info
+                               exit 1
+                       fi
+               fi
+      fi
+fi
+####################################################################################### 
+
+#######################################################################################

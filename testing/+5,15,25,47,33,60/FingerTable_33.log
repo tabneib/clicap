@@ -1,0 +1,43 @@
+Finger Table: 
+1    47
+2    47
+3    47
+4    47
+5    2
+6    2
+
+ Extended Finger Table:
+1    33
+2    47
+3    47
+4    47
+5    47
+6    66
+7    66
+
+________________________
+
+
+>> Initial Predecessor: 25
+>> Initial Successor: 47
+________________________
+
+Finger Table: 
+1    47
+2    47
+3    47
+4    47
+5    60
+6    2
+
+ Extended Finger Table:
+1    33
+2    47
+3    47
+4    47
+5    47
+6    60
+7    66
+
+________________________
+

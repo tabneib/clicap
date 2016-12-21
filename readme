@@ -1,0 +1,26 @@
+######################################################
+ELASTIC SECURITY ENFORCEMENT FOR ONLINE SERVICES
+######################################################
+HOANG-DUONG NGUYEN and TOBIAS REINHARD
+June, 2015
+######################################################
+
+
+› On the major server: install GraphViz
+
+› Configure SQUID to use ICAP Server
+
+› Generate the Shell Script File:
+
+	javac scriptGen.java
+	java scriptGen > clicap
+	chmod +x clicap
+
+› To build CliCap, run 
+
+	./clicap build
+
+› To start | stop CliCap ICAP server:
+
+	./clicap start	   or   ./clicap build start
+	./clicap stop

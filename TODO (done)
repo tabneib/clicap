@@ -1,0 +1,27 @@
+
+########  Distributed Enforcement ########
+########          TODO  	  ########
+########	  Hoang           ########
+
+
+
+1. Compute all finger tables manually
+
+2. Decide which information should be maintained in the inplementation of a finger table
+
+3. Implement the Finger Table class
+
+4. Modify the following classes in order to realize the Routing Algo:
+	
+	+ Coordinator: 		  › dest ID is replaced by Key of the required data
+				  › Routing algo ...
+	+ IcapDelegationResp/Req:   add reasonable getter
+	+ CliCap:		    configurable ! (first, just put everything into args)
+
+5. Find out how/where to configure/implement the IP and Port stuff & implement them !
+
+6. Try to run 10 servers with manually configuration
+
+7. Pack it all into one project
+
+8. Enjoy ^__^

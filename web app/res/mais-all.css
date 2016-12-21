@@ -1,0 +1,34 @@
+h1 a,h2 a,h3 a,a:focus,a:hover,a:active,span.gehe_zu,.formular legend,#formular legend{color: #99A604;}
+tr.gerade{background-color: #F0F2DA;}
+div#topnavigation{border-bottom-color: #99A604;}
+div#hauptnavigation a:focus,div#hauptnavigation a:hover,div#hauptnavigation a:active{color: #99A604;}
+ul.klappbox a:link,ul.klappbox a:visited{background-color: #F0F2DA;}
+ul.klappbox a:hover,ul.klappbox a:focus,div#hauptnavigation ul.klappbox a:active{background-color: #FFFFFF;}
+div#brotkrumen a:focus,div#brotkrumen a:hover,div#brotkrumen a:active{color: #99A604;}
+div#navigationsspalte{border-top-color: #99A604;}
+div#navigationsspalte li a:link,div#navigationsspalte li a:visited,div.tabs a{background-color: #F0F2DA;}
+div.aktiv,span.aktiv,a.aktiv,a.weiter,a.zurueck,div#navigationsspalte h1 a,div#navigationsspalte li a:focus,div#navigationsspalte li a:hover,div#navigationsspalte li a:active{color: #99A604 !important;}
+div.seitenbrowser a:focus,div.seitenbrowser a:hover,div.seitenbrowser a:active{color: #99A604;}
+tr.zwischenueberschrift_2 td,tr.zwischenueberschrift_3 td{color: #99A604;}
+form#suchformular fieldset,div#tu_biblio .ep_toolbox,div#news div.sticky,div.news div.sticky,.hervorgehoben{background-color: #F0F2DA;}
+div#sitemap a.ebene0,div#sitemap a.ebene1{color: #99A604;}
+.nach_oben img,span.weiter img,span.zurueck img,.bewertet{background-color: #99A604;}
+.unterlegt{background-color: #99A604;background-image:none !important;}
+.highlighted{background-color: #F0F2DA;}
+.umrandet{border-color: #99A604 !important;}
+
+table thead tr.shaded { background-color:#a0a0a0; }
+table thead tr.shaded td { font-weight:bold; }
+table tbody tr.odd { background-color:#ffffff; }
+table tbody tr.even { background-color:#e8e8e8; }
+
+div.extrabreite_spalte ul, div.zentrale_spalte ul { margin-left:17px; }
+dt { font-weight:bold; margin-bottom:0.1em; }
+dd { margin-bottom:0.5em; margin-left:17px; }
+
+div.kontakt table { width:595px; margin-bottom:0px; }
+div.kontakt table td { padding-left:0px; padding-right:40px; }
+div.kontakt table td p { margin-top:0px; margin-bottom:0px; text-indent:-10px; margin-left:10px; }
+div.kontakt table td table { width:auto; }
+div.kontakt table td table tr { vertical-align:top; }
+div.kontakt table td table td { padding-right:7px; white-space:nowrap;  }

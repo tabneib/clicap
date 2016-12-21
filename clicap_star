@@ -1,0 +1,98 @@
+#!/bin/sh
+#######################################################################################
+
+#######################################################################################
+# @author Hoang-Duong Nguyen
+#######################################################################################
+
+#######################################################################################
+JAVA_HOME=/usr/lib/jvm/java-7-oracle/jre
+OPTIONS='-Xms256m -Xmx256m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true'
+pidpath=/tmp/
+classname='clicap'
+pid=${classname}
+####################################################################################### 
+
+#######################################################################################
+start () {
+       # Run 1 Clicap - 1 central & 0 minor
+       cd jar	
+       echo -n 'Starting CliCap...'
+       echo $JAVA_HOME/bin/java
+       # Arguments: IS_CENTRAL - IS_READY - ID - COR_PORT - ENF_PORT -  REMOTE_PORT - DOMAIN - PREDECESSOR_ID - PREDECESSOR_DOMAIN - PREDECESSOR_PORT - SUCCESSOR_ID - SUCCESSOR_DOMAIN - SUCCESSOR_PORT - BIT_LENGTH - [remoteUnitID - domain - port]* 
+
+      $JAVA_HOME/bin/java -server $OPTIONS -jar clicap.jar 1 1 2 10001 10002 10003 localhost 2 localhost 10003 2 localhost 10003 6     \
+                                                                 2 localhost 10003    \
+                                                                 2 localhost 10003    \
+                                                                 2 localhost 10003    \
+                                                                 2 localhost 10003    \
+                                                                 2 localhost 10003    \
+                                                                 2 localhost 10003    \
+                                                                  & echo $!>${pidpath}${pid}-2.pid
+
+
+}
+stop () {
+       kill -15 `cat ${pidpath}${pid}-2.pid`
+       rm -r ${pidpath}${pid}-2.pid
+       echo -e "\nStopped CliCap\n"
+       exit 1
+}
+info () {
+       echo
+       echo 'BUILD:            .\clicap build'
+       echo 'RUN:              .\clicap start'
+       echo 'STOP:             .\clicap stop'
+       echo 'BUILD AND RUN:    .\clicap build start'
+       echo
+       return '0'
+}
+####################################################################################### 
+
+#######################################################################################
+if [ $# -gt 2 ] || [ $# -eq 0 ]; then
+       echo -e "\nWrong number of arguments!"
+       info
+       exit 1
+fi
+####################################################################################### 
+
+#######################################################################################
+if [ $# -eq 2 ]; then
+       if [ "$1" = "build" ] && [ "$2" = "start" ]; then
+               # Build CliCap		
+               ant		
+               # Start CliCap
+               	start
+       else
+               echo -e "\nIncorrect arguments!"
+               info
+               exit 1
+       fi
+fi
+####################################################################################### 
+
+#######################################################################################
+if [ $# -eq 1 ]; then
+       if [ "$1" = "start" ]; then	
+               # Run CliCap
+               start
+       else
+               if [ "$1" = "stop" ]; then
+                       # Stop CliCap
+                       stop
+               else
+                       if [  "$1" = "build" ]; then
+                               # Build CliCap				
+                               ant
+                       else
+                               echo -e "\nIncorrect argument!"
+                               info
+                               exit 1
+                       fi
+               fi
+      fi
+fi
+####################################################################################### 
+
+#######################################################################################

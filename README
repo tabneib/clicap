@@ -1,0 +1,175 @@
+/*
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of	
+ * this software and associated documentation files (the "Software"), to deal in
+ * the Software without restriction, including without limitation the rights to
+ * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ * of the Software, and to permit persons to whom the Software is furnished to do
+ * so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+		  +---------------------------------------------------------------+
+		  |	   							  |
+		  | 	  ELASTIC SECURITY ENFORCEMENT FOR ONLINE SERVICES	  |	
+		  |		      - Configuration Guide -			  |
+		  |								  |
+		  +---------------------------------------------------------------+
+
+|-------------------------------------------------------------------------------------------------|
+
+	+----------------------------------+
+	|	System Configuration 	   |
+	+----------------------------------+
+
+› OS : Ubuntu 14.04.2 LTS 64-bit
+› JDK: java-7-oracle
+
+
+
+	+------------------------------------------+
+	|	TomatoCart 1.1.7 Installation 	   |
+	+------------------------------------------+
+
+1. Install LAMP Server
+
+		sudo apt-get install lamp-server^
+
+2. Install PHP5 libraries
+
+		sudo apt-get install php5-curl php5-gd
+
+3. Create Directory tomato:
+
+		sudo mkdir /var/www/html/tomato
+
+4. Download TomatoCart 1.1.7 from  http://sourceforge.net/projects/tomatocart/files/ 
+   Unzip the downloaded file into  /var/www/html/
+
+5. Create MySQL database for TomatoCart:
+	
+		mysql -u root -p	
+		create database tomatodb;
+
+6. Create MySQL user & grant database access:
+   Note: The host name must be different from "localhost" 
+	 because some browsers don't send request for "localhost" through any proxy.
+	 This is not what we want, so use another name to bypass this problem.
+
+		create user tomatoAdmin;
+		set password for 'tomatoAdmin' = password('clicap');
+		grant all privileges on tomatodb.* to tomatoAdmin@"tomato.mais.tu-darmstadt.de";
+		FLUSH PRIVILEGES;
+		exit
+
+7. Configure hosts file:
+
+		sudo gedit /etc/hosts
+	
+	Add the following into the hosts file:
+		127.0.0.1 tomato.mais.tu-darmstadt.de
+		127.0.0.1 http://tomato.mais.tu-darmstadt.de
+		127.0.0.1 http://www.tomato.mais.tu-darmstadt.de
+
+
+8. Change permission to 777 for the following folders:
+	
+	/admin/images	
+	/admin/backups		
+	/cache	
+	/cache/admin	
+	/cache/admin/emails	
+	/cache/admin/emails/attachments	
+	/cache/orders_customizations	
+	/cache/products_attachments	
+	/cache/products_customizations	
+	/download	
+	/images	
+	/images/articles	
+	/images/articles/large	
+	/images/articles/mini	
+	/images/articles/originals	
+	/images/articles/product_info	
+	/images/articles/thumbnails	
+	/images/products	
+	/images/products/large	
+	/images/products/mini	
+	/images/products/originals	
+	/images/products/product_info	
+	/images/products/thumbnails	
+	/images/categories	
+	/images/manufacturers	
+	/includes/work	
+	/includes/logs	
+	/templates	
+	/admin/includes/languages	
+	/includes/languages	
+	/install/includes/languages	
+	/install/templates/main_page/languages
+	
+8. Open Firefox, navigate to  http://tomato.mais.tu-darmstadt.de/install
+   Follow the installation instruction to complete Tomato setup.
+
+9. After installing Tomato, login the administration page.
+   Enable "PayPal Express Checkout" in   Start › Modules › Payment Modules
+
+
+|-------------------------------------------------------------------------------------------------|
+
+	+------------------------------------------+
+	|	Reverse Proxy Configuration 	   |
+	+------------------------------------------+
+
+› Squid3 is used for this configuration
+
+	/etc/squid3/squid.conf
+
+
+› Setting as Reverse Server
+› Under Section   NETWORK OPTIONS
+
+› Squid listens to port 80
+	http_port 3128 accel defaultsite=tomato.mais.tu-darmstadt.de vhost
+
+
+
+› Define the Web Server
+› Under Section   OPTIONS WHICH AFFECT THE NEIGHBOR SELECTION ALGORITHM
+
+› Choosing Web Server 127.0.0.1 listening at port 80 and name tomato (just arbitrary)
+› Proxy & Web Application are located on the same server → 127.0.0.1
+	cache_peer 127.0.0.1 parent 80 0 no-query originserver name=tomato
+
+
+
+› Permission's Assignment
+› Under Section  Defining an Access List   
+
+› nhdhost 
+	acl tomato_users dstdomain defaultsite=tomato.mais.tu-darmstadt.de
+
+
+# Under Section   INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS 
+# This should be configured to redirect HTTP request to ICAP Server ;)
+	http_access allow tomato_users
+
+# Under Section   cache_peer_access
+
+	cache_peer_access tomato allow tomato_users
+	cache_peer_access tomato deny all
+
+
+# RESTART  ;) 
+
+	sudo service squid3 restart
+
+
+

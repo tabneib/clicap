@@ -1,0 +1,918 @@
+body{
+margin:0;
+background-color:#F1F1F1;
+}
+div#seiten_container{
+position:relative;
+top:0;
+width:977px;
+margin-left:20px;
+background:#fff url(/assets/site/tudesign/graphics/hintergrund.png) repeat-y;
+}
+div#seite{
+position:relative;
+top:0;
+width:931px;
+min-height:520px;
+margin-left:23px;
+padding-top:5px;
+padding-bottom:15px;
+background-color:#fff;
+z-index:1;
+}
+div#header{
+position:relative;
+top:0;
+width:100%;
+z-index:2;
+line-height:1;
+}
+div#zum_inhalt{
+position:absolute;
+top:0;
+left:0;
+}
+div#zum_inhalt a{
+color:#fff;
+}
+div#zum_inhalt a:focus,div#zum_inhalt a:active{
+color:#333;
+}
+div#topnavigation{
+position:relative;
+top:0;
+text-align:right;
+padding-bottom:8px;
+border-bottom-width:14px;
+border-bottom-style:solid;
+}
+div#topnavigation a:link,div#topnavigation a:visited{
+color:#333;
+text-decoration:none;
+}
+div#topnavigation a:focus,div#topnavigation a:hover,div#topnavigation a:active{
+text-decoration:underline;
+}
+div#topnavigation span.inaktiv{
+color:#999;
+}
+div#hauptnavigation_container{
+position:relative;
+top:0;
+width:100%;
+border-top:1px solid #333;
+margin-top:2px;
+z-index:5;
+}
+div#hauptnavigation{
+position:relative;
+top:0;
+width:801px;
+font-size:118%;
+font-weight:700;
+padding-top:4px;
+padding-bottom:7px;
+z-index:6;
+}
+ul.hauptmenue{
+position:relative;
+top:0;
+margin:0;
+padding:0;
+z-index:7;
+list-style-type:none;
+list-style-image:none;
+}
+ul.hauptmenue li{
+position:relative;
+top:0;
+display:inline;
+margin:0;
+padding:0;
+line-height:1;
+}
+ul.hauptmenue a{
+}
+li.hauptmenuepunkt{
+display:block;
+float:left;
+width:auto;
+margin-bottom:7px !important;
+}
+html* div#hauptnavigation{
+padding-top:2px !important;
+padding-bottom:6px !important;
+}
+html* li.hauptmenuepunkt{
+line-height:1.2;
+margin-bottom:5px !important;
+}
+li.delimiter{
+margin-left:4px !important;
+margin-right:4px !important;
+}
+li.hauptmenuepunkt > a{
+white-space:nowrap;
+}
+div#hauptnavigation a:link,div#hauptnavigation a:visited{
+text-decoration:none;
+color:#333;
+}
+div#hauptnavigation a:focus,div#hauptnavigation a:hover,div#hauptnavigation a:active{
+text-decoration:none;
+}
+ul.klappbox{
+position:absolute;
+top:16px;
+left:-2px;
+width:184px;
+z-index:10;
+font-size:85%;
+display:none;
+border-width:0 1px 1px;
+border-style:solid;
+border-color:#ccc;
+background-color:#fff;
+}
+div#hauptnavigation > ul.klappbox{
+width:182px !important;
+}
+ul.klappbox a{
+margin-left:1px;
+display:block;
+width:166px;
+padding:5px 8px 6px;
+border-bottom:1px solid #fff;
+}
+ul.klappbox a.aktiv{
+background-color:#fff !important;
+}
+div#suche{
+float:right;
+width:122px;
+text-align:right;
+margin-top:3px;
+z-index:9;
+}
+div#suche label{
+display:none;
+}
+#query_top{
+border-width:1px;
+border-style:solid;
+border-color:#666 #ccc #ccc #666;
+font-size:100%;
+width:100px;
+padding:0 2px !important;
+}
+div#suche input.abschicken{
+border:0;
+background-color:#fff;
+margin:0;
+padding:0;
+cursor:pointer;
+}
+div#headerbild_container{
+position:relative;
+top:0;
+width:100%;
+height:145px;
+overflow:hidden;
+z-index:2;
+}
+div#logo{
+position:absolute;
+left:749px;
+top:23px;
+z-index:4;
+}
+div#logo div#druck{
+display:none;
+}
+div#headerbild{
+position:relative;
+top:0;
+z-index:3;
+}
+div#headerbild img{
+width:931px;
+height:145px;
+}
+div#brotkrumen{
+position:relative;
+top:0;
+width:100%;
+margin-top:7px;
+padding-bottom:10px;
+font-size:100%;
+z-index:2;
+}
+div#brotkrumen ol{
+margin:0;
+padding:0;
+list-style-type:none !important;
+}
+div#brotkrumen li{
+display:inline !important;
+margin:0;
+padding:0;
+}
+div#brotkrumen a:link,div#brotkrumen a:visited{
+color:#666;
+text-decoration:none;
+}
+div#brotkrumen a:focus,div#brotkrumen a:hover,div#brotkrumen a:active{
+text-decoration:none;
+}
+div#spalten_container{
+position:relative;
+top:0;
+width:100%;
+z-index:0;
+}
+div#navigationsspalte{
+float:left;
+width:182px;
+margin-right:19px;
+margin-bottom:20px;
+line-height:1.2;
+border-top-width:2px;
+border-top-style:solid;
+}
+div#navigationsspalte h1{
+margin-top:9px;
+padding-bottom:3px;
+margin-bottom:1px;
+border-bottom:1px solid #E5E5E5;
+font-size:109% !important;
+line-height:1.1;
+}
+div#navigationsspalte a:hover span.neues_fenster,div#navigationsspalte a:hover span.hat_untermenue{
+visibility:visible;
+}
+div#navigationsspalte a{
+display:block;
+width:166px;
+padding:5px 8px;
+margin:0;
+color:#333;
+text-decoration:none;
+border-bottom:1px solid #fff;
+}
+div#navigationsspalte a:focus,div#navigationsspalte a:hover,div#navigationsspalte a:active{
+background-color:#fff !important;
+}
+div#navigationsspalte h1 a{
+padding:0;
+border:0;
+}
+div#navigationsspalte ul{
+margin:0;
+padding:0;
+list-style-type:none;
+list-style-image:none;
+}
+div#navigationsspalte > ul{
+border-bottom:1px solid #E5E5E5;
+}
+div#navigationsspalte li{
+margin:0;
+padding:0;
+clear:both;
+}
+div#navigationsspalte span.navi_pfeil{
+float:right;
+width:7px;
+margin-right:-7px;
+}
+span.neues_fenster,span.hat_untermenue{
+float:right;
+visibility:hidden;
+text-align:right;
+}
+span.neues_fenster{
+float:right;
+width:14px;
+margin:3px -6px 0 2px;
+visibility:hidden;
+text-align:right;
+}
+span.hat_untermenue{
+width:6px;
+margin:3px -6px 0 2px;
+}
+div#navigationsspalte a.ebene1{
+font-weight:700;
+}
+div#navigationsspalte a.ebene2{
+padding-top:4px !important;
+}
+div#navigationsspalte li > a.ebene2{
+background:url(/assets/site/tudesign/graphics/schleier_25.png) repeat-y;
+}
+div#navigationsspalte a.ebene3{
+padding:3px 8px 3px 18px !important;
+}
+div#navigationsspalte li > a.ebene3{
+background:url(/assets/site/tudesign/graphics/schleier_45.png) repeat-y;
+width:156px !important;
+}
+div#navigationsspalte a.ebene4{
+padding:2px 8px 2px 28px !important;
+}
+div#navigationsspalte li > a.ebene4{
+width:146px !important;
+background:url(/assets/site/tudesign/graphics/schleier_60.png) repeat-y;
+}
+div#navigationsspalte a.ebene5{
+padding:1px 8px 2px 38px !important;
+}
+div#navigationsspalte li > a.ebene5{
+width:136px !important;
+background:url(/assets/site/tudesign/graphics/schleier_70.png) repeat-y;
+}
+div#navigationsspalte a.aktiv{
+background-color:#fff !important;
+border-bottom:1px solid #fff;
+}
+div#zentrale_spalte{
+float:left;
+width:548px;
+}
+div#zentrale_spalte h1, div.extrabreite_spalte h1{
+font-size:145%;
+}
+div#zentrale_spalte h2{
+font-size:118%;
+}
+div.eine_spalte{
+width:529px;
+border-bottom:1px solid #fff;
+}
+div.zwei_spalten{
+width:255px;
+margin-right:19px;
+}
+div.halb{
+width:255px;
+}
+div.breit{
+width:315px;
+}
+div.schmal{
+width:195px;
+}
+div.abstand_rechts{
+margin-right:19px;
+}
+.hervorgehoben{
+border:1px solid #E5E5E5;
+margin-bottom:1.6em;
+padding:4px;
+background-image:url(/assets/site/tudesign/graphics/schleier_45.png);
+margin-left:-5px;
+margin-right:-5px;
+}
+* html div.abstand_rechts{
+margin-right:10px !important;
+}
+* html .hervorgehoben{
+margin-left:0;
+margin-right:0;
+}
+* html .hervorgehoben div.zwei_spalten,* html .hervorgehoben div.halb{
+width:249px !important;
+}
+* html div.zwei_spalten_layout div.breit{
+width:309px !important;
+}
+* html div.zwei_spalten_layout div.schmal{
+width:189px !important;
+}
+div.extrabreite_spalte{
+float:left;
+width:730px;
+}
+div#rechte_marginalienspalte{
+float:left;
+width:182px;
+border-top-width:2px;
+border-top-style:solid;
+line-height:1.4;
+margin-bottom:1.6em;
+overflow:hidden;
+}
+div#fussbereich_container{
+position:relative;
+top:0;
+width:100%;
+z-index:2;
+}
+div#schatten_unten{
+position:relative;
+top:0;
+height:3px;
+margin-left:20px;
+background:url(/assets/site/tudesign/graphics/schatten_unten.png) no-repeat;
+}
+div#fussbereich{
+position:relative;
+top:0;
+width:931px;
+margin:5px 23px 10px 43px;
+line-height:1;
+}
+div#nach_oben{
+position:absolute;
+left:43px;
+width:931px;
+top:-20px;
+}
+div#fussbereich a:link,div#fussbereich a:visited{
+color:#333;
+text-decoration:none;
+}
+div#fussbereich a:focus,div#fussbereich a:hover,div#fussbereich a:active{
+text-decoration:underline;
+}
+a#schrift_kleiner{
+font-size:91%;
+}
+a#schrift_normal{
+font-size:109%;
+}
+a#schrift_groesser{
+font-size:127%;
+}
+div#zentrale_spalte .folge_absatz,div.extrabreite_spalte .folge_absatz{
+margin-top:-0.8em;
+}
+.feld .folge_absatz{
+margin-top:-0.4em !important;
+}
+div#rechte_marginalienspalte p.folge_absatz{
+margin-top:-0.4em;
+}
+.icon{
+padding-left:19px;
+background-position:left 1px;
+background-repeat:no-repeat;
+background-image:url(/assets/site/tudesign/graphics/file.png);
+}
+a.externer_link{
+background-image:url(/assets/site/tudesign/graphics/externer_link.png);
+}
+a.sightboard{
+background-image:url(/assets/site/tudesign/graphics/sightboard.png);
+}
+.linksammlung a.interner_link{
+padding-left:19px;
+background-position:left 1px;
+background-repeat:no-repeat;
+background-image:url(/assets/site/tudesign/graphics/interner_link.png);
+}
+a.hilfeseite{
+background-image:url(/assets/site/tudesign/graphics/hilfeseite.png);
+cursor:help;
+}
+a.avi{
+background-image:url(/assets/site/tudesign/graphics/avi.png);
+}
+a.doc,a.docx{
+background-image:url(/assets/site/tudesign/graphics/doc.png);
+}
+a.dot{
+background-image:url(/assets/site/tudesign/graphics/dot.png);
+}
+a.exe{
+background-image:url(/assets/site/tudesign/graphics/exe.png);
+}
+a.flv{
+background-image:url(/assets/site/tudesign/graphics/flv.png);
+}
+a.gif{
+background-image:url(/assets/site/tudesign/graphics/gif.png);
+}
+a.gz,a.gzip{
+background-image:url(/assets/site/tudesign/graphics/gz.png);
+}
+a.jpg,a.jpeg{
+background-image:url(/assets/site/tudesign/graphics/jpg.png);
+}
+a.m{
+background-image:url(/assets/site/tudesign/graphics/m.png);
+}
+a.mov{
+background-image:url(/assets/site/tudesign/graphics/mov.png);
+}
+a.mp3{
+background-image:url(/assets/site/tudesign/graphics/mp3.png);
+}
+a.mp4{
+background-image:url(/assets/site/tudesign/graphics/mp4.png);
+}
+a.nb{
+background-image:url(/assets/site/tudesign/graphics/nb.png);
+}
+a.odf{
+background-image:url(/assets/site/tudesign/graphics/odf.png);
+}
+a.ogg{
+background-image:url(/assets/site/tudesign/graphics/ogg.png);
+}
+a.pdf,a.externes_pdf{
+background-image:url(/assets/site/tudesign/graphics/pdf.png);
+}
+a.png{
+background-image:url(/assets/site/tudesign/graphics/png.png);
+}
+a.ppt,a.pptx{
+background-image:url(/assets/site/tudesign/graphics/ppt.png);
+}
+a.ps{
+background-image:url(/assets/site/tudesign/graphics/ps.png);
+}
+a.rar,a.zip{
+background-image:url(/assets/site/tudesign/graphics/zip.png);
+}
+a.rtf{
+background-image:url(/assets/site/tudesign/graphics/rtf.png);
+}
+a.svg{
+background-image:url(/assets/site/tudesign/graphics/svg.png);
+}
+a.sxw{
+background-image:url(/assets/site/tudesign/graphics/sxw.png);
+}
+a.swf{
+background-image:url(/assets/site/tudesign/graphics/swf.png);
+}
+a.tex{
+background-image:url(/assets/site/tudesign/graphics/tex.png);
+}
+a.wav{
+background-image:url(/assets/site/tudesign/graphics/wav.png);
+}
+a.wmv{
+background-image:url(/assets/site/tudesign/graphics/wmv.png);
+}
+a.xls,a.xlsx{
+background-image:url(/assets/site/tudesign/graphics/xls.png);
+}
+a.tgz{
+background-image:url(/assets/site/tudesign/graphics/tgz.png);
+}
+a.txt{
+background-image:url(/assets/site/tudesign/graphics/txt.png);
+}
+.email{
+background-image:url(/assets/site/tudesign/graphics/email.png);
+}
+.mitarbeiterliste .email{
+background:none;
+}
+.mitarbeiterliste .icon, #newsletter .icon{
+padding-left:0;
+}
+span.telefon{
+background-image:url(/assets/site/tudesign/graphics/telefon.png);
+}
+span.fax{
+background-image:url(/assets/site/tudesign/graphics/fax.png);
+}
+span.mobil{
+background-image:url(/assets/site/tudesign/graphics/mobil.png);
+}
+#newsletter a{
+background:none !important;
+}
+div.ausgeblendet{
+border:1px solid #E5E5E5;
+padding-left:5px;
+padding-right:5px;
+background-color:#F4F4F4;
+color:#666;
+}
+.plus a,a.plus{
+color:#333;
+padding-left:14px;
+background:url(/assets/site/tudesign/graphics/plus.png) no-repeat left 2px;
+}
+.minus a,a.minus,.dateiliste .minus{
+color:#333;
+padding-left:14px;
+background:url(/assets/site/tudesign/graphics/minus.png) no-repeat left 2px;
+}
+a.doppel_plus{
+padding-left:20px;
+background:url(/assets/site/tudesign/graphics/doppel_plus.png) no-repeat left 2px;
+}
+a.doppel_minus{
+margin-left:20px;
+padding-left:20px;
+background:url(/assets/site/tudesign/graphics/doppel_minus.png) no-repeat left 2px;
+}
+a.klappen{
+color:#333;
+}
+form#abmelden{
+display:inline;
+width:auto;
+margin:0;
+padding:0;
+}
+form#abmelden input[type=submit]{
+background:transparent none;
+border-width:0;
+margin:0;
+padding:0 !important;
+color:#333;
+height:13px;
+overflow:visible;
+}
+form#abmelden input[type=submit]:hover{
+text-decoration:underline;
+}
+form#abmelden a{
+display:none;
+}
+form#suchformular form{
+margin:0;
+padding:0;
+}
+form#suchformular fieldset{
+margin:0;
+border:1px solid #E5E5E5;
+padding:5px;
+}
+form#suchformular label{
+clear:both;
+float:left;
+width:80px;
+}
+form#suchformular label.im_text{
+clear:none !important;
+float:none;
+display:inline;
+width:auto;
+}
+form#suchformular input[type=text]{
+margin-bottom:5px;
+width:120px;
+}
+form#suchformular select{
+margin-bottom:5px;
+max-width:450px;
+overflow:hidden;
+}
+form#suchformular input[type=submit]{
+clear:both;
+}
+th.header span.sort{
+background:url(../cd_grafiken/sort.png) no-repeat center right;
+cursor:pointer;
+padding-right:14px;
+}
+th.header span.sort:hover{
+background-color:#F0F0F0;
+}
+th.headerSortUp span.sort{
+background-image:url(../cd_grafiken/ascending.png);
+background-color:#F0F0F0;
+}
+th.headerSortDown span.sort{
+background-image:url(../cd_grafiken/descending.png);
+background-color:#F0F0F0;
+}
+th.header a{
+color:#333;
+}
+div.nach_oben{
+width:100%;
+text-align:right;
+}
+div.nach_oben img{
+width:15px;
+height:15px;
+}
+div.text_mit_bild div.text{
+float:left;
+width:255px;
+}
+div.seitenbrowser{
+margin-bottom:1.6em;
+}
+div.seitenbrowser ol,div.seitenbrowser ul{
+margin:0;
+}
+div.seitenbrowser li{
+display:inline;
+list-style:none;
+margin:0;
+padding:0 2px;
+}
+div.seitenbrowser a:link,div.seitenbrowser a:visited{
+text-decoration:none;
+color:#333;
+}
+div.seitenbrowser a:focus,div.seitenbrowser a:hover,div.seitenbrowser a:active{
+text-decoration:none;
+}
+div.seitenbrowser a,div.seitenbrowser span{
+white-space:nowrap;
+margin:0;
+padding:0;
+}
+div.pfeilnavigation{
+margin-top:.8em;
+}
+div.pfeil{
+display:inline;
+border:1px solid #ccc;
+padding:1px 2px;
+margin-right:2px;
+background-color:#F4F4F4;
+}
+div.seitenbrowser span.navi_pfeil{
+display:none;
+}
+div.seitenbrowser div.inaktiv{
+color:#999;
+}
+div.tabs{
+width:100%;
+margin-top:5px;
+}
+div.tabs ol{
+overflow:hidden;
+padding-left:6px;
+border-bottom:1px solid #e5e5e5;
+}
+div.tabs li{
+display:block;
+float:left;
+width:auto;
+margin:0 0 -1px -1px;
+padding:0;
+border-width:1px;
+border-style:solid;
+border-color:#ccc;
+}
+div.tabs a{
+display:block;
+padding:2px 4px;
+margin-bottom:-1px;
+}
+div.tabs a.aktiv,div.tabs li.aktiv a:visited,div.tabs li a:hover,div.tabs li a:active,div.tabs li a:focus{
+background-color:#fff !important;
+}
+.seitenbrowser_rechts{
+border-width:1px 1px 1px 0;
+border-style:solid;
+border-color:#ccc;
+padding:10px 5px 10px 0;
+margin:1.4em 0 !important;
+}
+.seitenbrowser_rechts li{
+position:relative !important;
+display:block !important;
+padding:0 !important;
+margin-bottom:0.5em !important;
+}
+.seitenbrowser_rechts span.navi_pfeil{
+position:absolute;
+width:7px;
+left:-20px;
+margin-top:0.3em;
+}
+.seitenbrowser_rechts ul, .seitenbrowser_rechts ol{
+margin-bottom:0;
+}
+.seitenbrowser_rechts a,
+.seitenbrowser_rechts span{
+white-space:normal !important;
+padding-left:10px !important;
+display:block !important;
+line-height:1.2;
+}
+div#rechte_marginalienspalte div#suchdetails{
+margin-bottom:.7em;
+}
+div#rechte_marginalienspalte div#suchdetails form input#query{
+width:125px;
+}
+div#rechte_marginalienspalte div#suchdetails div.resultate{
+display:none;
+}
+div#rechtemarginalienspalte div.suchergebnis div.eintrag{
+margin-bottom:.4em;
+}
+div#rechte_marginalienspalte div.suchergebnis div.eintrag p.link_zur_seite{
+display:none;
+}
+div.kontakt{
+margin-bottom:1.4em
+}
+div#sitemap li.ebene1{
+position:relative;
+top:0;
+}
+div#sitemap .nach_oben{
+position:absolute;
+top:2px;
+right:0;
+width:15px;
+height:15px;
+}
+div.galerie_navigation{
+margin-bottom:.8em;
+}
+.vorgaenger{
+float:left;
+width:100px;
+margin-bottom:.8em;
+}
+.nachfolger{
+float:right;
+width:100px;
+text-align:right;
+margin-bottom:.8em;
+}
+div.galerie_navigation .beschriftung,div.galerie_navigation .liste{
+text-align:center;
+margin-bottom:.8em;
+overflow:hidden;
+}
+div.socialbookmarks{
+border-top:1px solid #e5e5e5;
+padding-top:.4em;
+margin-top:3.2em;
+margin-bottom:1.6em;
+}
+a.bookmark{
+margin-right:5px;
+text-decoration:none;
+}
+img.bookmark{
+padding:1px;
+}
+div.kommentare{
+border:1px solid #E5E5E5;
+padding:.4em 4px;
+background-color:#f8f8f8;
+margin-left:-5px;
+margin-right:-5px;
+}
+div.kommentar{
+padding:.8em 0;
+border-top:1px solid #E5E5E5;
+}
+div.kommentar h3{
+margin:0;
+}
+div.kommentar p{
+margin-bottom:.4em;
+}
+div.kommentar form{
+display:inline;
+margin:0;
+}
+div.aktionen a{
+color:#333;
+}
+div.verkuerzt{
+position:relative;
+height:69px;
+padding-bottom:1.6em;
+overflow:hidden;
+border-bottom:1px dashed #ccc;
+margin-bottom:.4em;
+}
+div.mehr{
+position:absolute;
+bottom:0;
+width:100%;
+background-color:#f8f8f8;
+}
+div.gesperrt{
+background-color:#f0f0f0;
+}
+div.gesperrt h3, div.gesperrt p{
+color:#666 !important;
+}
+.bewertung{
+height:1.6em;
+}
+.bewerten{
+background-color:#f0f0f0;
+}
+.bewertet{
+background-image:url(/assets/site/tudesign/graphics/schleier_40.png);
+}
+.label_bewerten{
+border:1px solid #E5E5E5;
+padding:4px;
+margin-left:5px;
+position:relative;
+bottom:3px;
+}

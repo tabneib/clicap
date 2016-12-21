@@ -1,0 +1,1 @@
+/usr/lib/jvm/java-7-oracle/bin/java -server -Xms256m -Xmx256m -Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -jar /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/jar/clicap.jar 0 0 40 10031 10032 10033 localhost 37 localhost 10018 48 localhost 10021 6 48 localhost 10021 48 localhost 10021 48 localhost 10021 48 localhost 10021 60 localhost 10027 8 localhost 10009 

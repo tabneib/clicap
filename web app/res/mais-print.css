@@ -1,0 +1,4 @@
+div#seiten_container{border-top-color: #99A604;}
+span.telefon:before{content: "Tel.: ";}
+span.fax:before{content: "Fax: ";}
+span.mobil:before{content: "Mobil: ";}

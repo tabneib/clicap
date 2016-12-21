@@ -1,0 +1,806 @@
+Buildfile: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/build.xml
+[defaultexcludes] Current Default Excludes:
+[defaultexcludes]   **/.*/**
+[defaultexcludes]   **/.cvsignore
+[defaultexcludes]   **/SCCS
+[defaultexcludes]   **/CVS
+[defaultexcludes]   **/.*
+[defaultexcludes]   **/.hg
+[defaultexcludes]   **/SCCS/**
+[defaultexcludes]   **/#*#
+[defaultexcludes]   **/.bzr/**
+[defaultexcludes]   **/.hgsubstate
+[defaultexcludes]   **/.bzrignore
+[defaultexcludes]   **/.gitignore
+[defaultexcludes]   **/.git
+[defaultexcludes]   **/.svn/**
+[defaultexcludes]   **/vssver.scc
+[defaultexcludes]   **/.hg/**
+[defaultexcludes]   **/CVS/**
+[defaultexcludes]   **/.hgignore
+[defaultexcludes]   **/.gitattributes
+[defaultexcludes]   **/.DS_Store
+[defaultexcludes]   **/._*
+[defaultexcludes]   **/.svn
+[defaultexcludes]   **/*~
+[defaultexcludes]   **/.bzr
+[defaultexcludes]   **/.hgsub
+[defaultexcludes]   **/.hgtags
+[defaultexcludes]   **/.git/**
+[defaultexcludes]   **/.#*
+[defaultexcludes]   **/%*%
+[defaultexcludes]   **/.gitmodules
+
+compile:
+     [echo] Compiling...
+     [echo] JDK home: /usr/lib/jvm/java-7-oracle/jre
+    [javac] /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/build.xml:62: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+
+combined-jar:
+     [echo] Building fat jar without external dependencies...
+    [mkdir] Created dir: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp
+    [mkdir] Created dir: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/antlr.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/commons-compress-1.0.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/commons-daemon.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/commons-io.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/commons-lang-2.3.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/commons-lang.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/hamcrest-core.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/jansi.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/javacc.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/jrobin-1.5.9.1.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/junit.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/log4j.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/stringtemplate.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+    [unjar] Expanding: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/lib/yuicompressor-2.4.2.jar into /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+     [copy] Copying 180 files to /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar
+   [delete] Deleting directory /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp/depjar/META-INF
+      [jar] Building jar: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/jar/clicap.jar
+   [delete] Deleting directory /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/tmp
+
+copylibs:
+
+default:
+   [delete] Deleting directory /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/log
+    [mkdir] Created dir: /home/nhd/git/cb58culu-dynamo/Eclipse-Workspace/clicap/log
+
+BUILD SUCCESSFUL
+Total time: 4 seconds
+Starting CliCap.../usr/lib/jvm/java-7-oracle/bin/java
+Server 51 is started 
+
+Server 37 is started 
+
+Server 41 is started 
+
+Server 48 is started 
+
+Server 33 is started 
+
+Server 8 is started 
+
+Server 7 is started 
+
+Server 63 is started 
+
+Server 29 is started 
+
+
+ICAP Server at server 2 is started.
+
+Server 60 is started 
+
+Server 2 is started 
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  41  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_RESP
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_REQ
+
+node  41  received  STABILIZATION_RESP
+
+node  37  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  41  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_RESP
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  37  received  STABILIZATION_REQ
+node  48  received  STABILIZATION_REQ
+
+
+node  51  received  STABILIZATION_REQ
+
+node  33  received  STABILIZATION_RESP
+node  41  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_RESP
+
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  41  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_RESP
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_REQ
+
+node  41  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  41  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_RESP
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_REQ
+
+node  41  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  41  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_RESP
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_REQ
+
+node  41  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  33  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  41  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_RESP
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  41  received  STABILIZATION_RESP
+
+node  37  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_REQ
+
+node  33  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  41  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_RESP
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  41  received  STABILIZATION_RESP
+
+node  37  received  STABILIZATION_REQ
+
+node  33  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  41  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_RESP
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  41  received  STABILIZATION_RESP
+
+node  37  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_REQ
+
+node  33  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+scale=leave&id=41
+                                                             SCALE_IN(41)
+Next unit is : 37
+«««« Server 41 turned off stabilization!!!!
+29: Next Unit = 37
+29: Suc = 33
+29: targ = 40
+37: Next Unit = 41
+37: Suc = 41
+37: targ = 40
+29: Next Unit = 37
+29: Suc = 33
+29: targ = 39
+37: Next Unit = 41
+37: Suc = 41
+37: targ = 39
+29: Next Unit = 33
+29: Suc = 33
+29: targ = 37
+33: Next Unit = 37
+33: Suc = 37
+33: targ = 37
+29: Next Unit = 33
+29: Suc = 33
+29: targ = 33
+60: Next Unit = 71
+60: Suc = 63
+60: targ = 89
+7: Next Unit = 8
+7: Suc = 8
+7: targ = 25
+8: Next Unit = 29
+8: Suc = 29
+8: targ = 25
+60: Next Unit = 71
+60: Suc = 63
+60: targ = 73
+7: Next Unit = 8
+7: Suc = 8
+7: targ = 9
+8: Next Unit = 29
+8: Suc = 29
+8: targ = 9
+» Server 2 :: Decision received.
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  37  received  STABILIZATION_RESP
+
+ids do not match : 41 | 37
+(37, localhost, 10018) : succesor outdated => new successor (41, localhost, 10021)
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+
+»»» Server 41 has been successfully terminated. 
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+Network+Map=print
+                                                             PRINT_NETWORK_MAP()
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+
+node  7  received  STABILIZATION_REQ
+
+node  2  received  STABILIZATION_RESP
+
+node  60  received  STABILIZATION_REQ
+
+node  51  received  STABILIZATION_RESP
+
+node  48  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_REQ
+
+node  7  received  STABILIZATION_RESP
+
+node  51  received  STABILIZATION_REQ
+
+node  48  received  STABILIZATION_RESP
+
+node  29  received  STABILIZATION_REQ
+
+node  8  received  STABILIZATION_RESP
+
+node  33  received  STABILIZATION_REQ
+
+node  29  received  STABILIZATION_RESP
+
+node  2  received  STABILIZATION_REQ
+
+node  63  received  STABILIZATION_RESP
+
+node  63  received  STABILIZATION_REQ
+
+node  60  received  STABILIZATION_RESP
+

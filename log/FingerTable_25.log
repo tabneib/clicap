@@ -1,0 +1,24 @@
+Finger Table: 
+1    32
+2    32
+3    32
+4    33
+5    42
+6    1
+
+ Extended Finger Table:
+1    25
+2    32
+3    32
+4    32
+5    33
+6    42
+7    65
+
+________________________
+
+
+>> Initial Predecessor: 24
+>> Initial Successor: 32
+________________________
+

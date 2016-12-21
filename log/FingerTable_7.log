@@ -1,0 +1,24 @@
+Finger Table: 
+1    11
+2    11
+3    11
+4    16
+5    23
+6    42
+
+ Extended Finger Table:
+1    7
+2    11
+3    11
+4    11
+5    16
+6    23
+7    42
+
+________________________
+
+
+>> Initial Predecessor: 6
+>> Initial Successor: 11
+________________________
+
